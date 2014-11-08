@@ -2,22 +2,37 @@
   .col-md-1
   .col-md-4
     h3 Register a New Donee
-    form(role='form', novalidate, name='newDonee')
-    .form-group
-      label(for='name') Name/Alias
-      input.form-control#name(type='text', name='name', ng-model='donee.name', required, autofocus)
-    .form-group
-      label(for='identifier') Internal Identifier
-      input.form-control#identifier(type='text', name='identifier', ng-model='donee.identifier', required)
-    .form-group
-      label(for='skills') Skills
-      input.form-control#skills(type='text', name='skills', ng-model='donee.skills')
-    .form-group
-      label(for='story') Story
-      input.form-control#story(type='textarea', name='story', ng-model='donee.story')
-    .form-group
-      label(for='photo') Photo
-      input(type='file', ng-file-select='onFileSelect($files)', ng-model='donee.photo')
-    .form-group
-      button.btn(ng-show='newDonee.$valid', ng-click='add()') Add Donee
+.row
+  .newDoneeForm
+    .col-md-1
+    .col-md-4
+      form(role='form', novalidate, name='newDonee')
+      .form-group
+        label(for='name') Name
+        input.form-control#name(type='text', name='name', ng-model='donee.name', required, autofocus)
+      .form-group
+        label(for='alias') Alias
+        input.form-control#name(type='text', name='alias', ng-model='donee.alias')
+      .form-group
+        label(for='email') Email
+        input.form-control#name(type='email', name='email', ng-model='donee.email')
+      .form-group
+        label(for='skills') Skills
+        input.form-control#skills(type='text', name='skills', ng-model='donee.skills')
+    .col-md-2
+    .col-md-4
+      .form-group
+        label(for='goals') Goals
+        input.form-control#story(type='text', name='goals', ng-model='donee.goals')
+      .form-group
+        label(for='story') Story
+        input.form-control#story(type='textarea', name='story', ng-model='donee.story')
+      .form-group
+        label(for='qrCode') QR Code
+        input.form-control#identifier(type='text', name='qrCode', ng-model='donee.qrCode', required)
+      .form-group
+        label(for='photo') Photo
+        input(type='file', ng-file-select='onFileSelect($files)', ng-model='donee.photo')
+      .form-group
+        button.btn(ng-show='newDonee.$valid', ng-click='add()') Add Donee
     

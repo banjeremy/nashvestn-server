@@ -24,14 +24,11 @@ exports.show = function(req, res) {
 // Creates a new donee in the DB.
 exports.create = function(req, res) {
   var form = new mp.Form();
+  // parses form information from req
   form.parse(req, function(err, data, file){
     var info = data.donee[0];
     var doneeInfo = JSON.parse(info);
-    console.log('REQ.BODY>>>>>', req.body);
-    Donee.create(doneeInfo, file, function(err, donee) {
-      console.log('err in Donee.create in controller>>>>', err);
-      console.log('donee in Donee.create in controller>>>>', donee);
-
+    Donee.create(doneeInfo, function(err, donee) {
       if(err) { return handleError(res, err); }
       return res.json(201, donee);
     });
