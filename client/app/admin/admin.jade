@@ -1,5 +1,34 @@
 div(ng-include='"components/navbar/navbar.html"')
 .container
+  .row
+    .col-lg-6
+      img.img-responsive(src='assets/images/nasResMis.png')
+      h2 { { admin.name }}
+      h4  { { admin.address}}
+      h4 { { admin.account }}
+      button.btn.btn-primary.btn-block.admin(ng-click='toggleAdd()') Print A Report
+    .col-lg-6
+      a.button.btn.btn-primary.btn-block.admin(href='/newDonee') Add A Donee 
+      .filter
+        form.form-inline#filter(role='form', name='filterForm')
+        .form-group
+          label.sr-only(for='filter')
+          .input-group
+              .input-group-addon: i.fa.fa-fw.fa-filter
+              input.form-control(type='text', name='filter', placeholder='Filter By Name', ng-model='nameFilter')
+      .row.doneeEdit
+        .col-lg-12
+          ul(ng-repeat='donee in donees | filter: nameFilter')
+            li: a(href='/#/viewDonee/:{{donee._id}}') {{donee.name}} 
+
+  .row
+    .col-lg-4
+      img.img-responsive.graph(src='assets/images/graph.svg')
+    .col-lg-4
+      img.img-responsive.graph(src='assets/images/graph.svg')
+    .col-lg-4
+      img.img-responsive.graph(src='assets/images/graph.svg')
+
   p
     | The delete user and user index api routes are restricted to users with the 'admin' role.
   ul.list-group
