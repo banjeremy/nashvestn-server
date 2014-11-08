@@ -17,7 +17,7 @@
       input.form-control#story(type='textarea', name='story', ng-model='donee.story')
     .form-group
       label(for='photo') Photo
-      input(type='file', ng-file-select='onFileSelect($file)', ng-model='donee.photo')
+      input(type='file', ng-file-select='onFileSelect($files)', ng-model='donee.photo')
     .form-group
       button.btn(ng-show='newDonee.$valid', ng-click='add()') Add Donee
     

@@ -22,6 +22,7 @@ exports.show = function(req, res) {
 
 // Creates a new donee in the DB.
 exports.create = function(req, res) {
+  console.log('REQ.BODY>>>>>', req.body);
   Donee.create(req.body, function(err, donee) {
     if(err) { return handleError(res, err); }
     return res.json(201, donee);

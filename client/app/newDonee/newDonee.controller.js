@@ -11,19 +11,18 @@ angular.module('nashvestnServerApp')
         });
     };
 
-    $scope.onFileSelect = function($file){
-      console.log('$file in $scope.onFileSelect>>>>>', $file);
-      $scope.file = $file;
+    $scope.onFileSelect = function($files){
+      console.log('$file in $scope.onFileSelect>>>>>', $files);
+      $scope.file = $files;
     };
 
     function addDonee(donee, file){
       console.log('donee in function addDonee>>>>>', donee);
       console.log('file in function addDonee>>>>>', file);
       // if no file submitted, file is null
-      var file = file ? file[0] : null;
+//      var file = file ? file[0] : null;
       return $upload.upload({
-        // redirects to dashboard when contact is added
-        url: '/newDonee',
+        url: '/api/donees',
         method: 'POST',
         withCredentials: true,
         data: {donee:donee},
