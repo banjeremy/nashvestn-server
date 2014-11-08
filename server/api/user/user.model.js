@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var crypto = require('crypto');
 var authTypes = ['github', 'twitter', 'facebook', 'google'];
+var Patron = require('../patron/patron.model');
 
 var UserSchema = new Schema({
   name: String,
@@ -18,7 +19,8 @@ var UserSchema = new Schema({
   facebook: {},
   twitter: {},
   google: {},
-  github: {}
+  github: {},
+  patron: { type: Schema.Types.ObjectId, ref: 'Patron' }
 });
 
 /**
@@ -143,10 +145,6 @@ UserSchema.methods = {
     if (!password || !this.salt) return '';
     var salt = new Buffer(this.salt, 'base64');
     return crypto.pbkdf2Sync(password, salt, 10000, 64).toString('base64');
-  },
-
-  isPatron: function() {
-    return this.role === "patron";
   }
 };
 
