@@ -10,7 +10,7 @@ var UserSchema = new Schema({
   email: { type: String, lowercase: true },
   role: {
     type: String,
-    default: 'user'
+    default: 'patron'
   },
   hashedPassword: String,
   provider: String,
@@ -143,6 +143,10 @@ UserSchema.methods = {
     if (!password || !this.salt) return '';
     var salt = new Buffer(this.salt, 'base64');
     return crypto.pbkdf2Sync(password, salt, 10000, 64).toString('base64');
+  },
+
+  isPatron: function() {
+    return this.role === "patron";
   }
 };
 
