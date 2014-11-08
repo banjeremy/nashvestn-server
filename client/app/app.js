@@ -6,7 +6,8 @@ angular.module('nashvestnServerApp', [
   'ngSanitize',
   'ngRoute',
   'ui.bootstrap',
-  'angularFileUpload'
+  'angularFileUpload',
+  'd3'
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider
