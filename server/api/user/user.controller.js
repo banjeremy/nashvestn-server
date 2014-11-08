@@ -1,9 +1,18 @@
-'use strict';
+/**
+ * Using Rails-like standard naming convention for endpoints.
+ * GET     /users              ->  index
+ * POST    /users              ->  create
+ * GET     /users/:id          ->  show
+ * PUT     /users/:id          ->  update
+ * DELETE  /users/:id          ->  destroy
+ */
 
-var User = require('./user.model');
-var passport = require('passport');
-var config = require('../../config/environment');
-var jwt = require('jsonwebtoken');
+ 'use strict';
+
+var User     = require('./user.model'),
+    passport = require('passport'),
+    config   = require('../../config/environment'),
+    jwt      = require('jsonwebtoken');
 
 var validationError = function(res, err) {
   return res.json(422, err);

@@ -1,8 +1,17 @@
+/**
+ * Using Rails-like standard naming convention for endpoints.
+ * GET     /donees              ->  index
+ * POST    /donees              ->  create
+ * GET     /donees/:id          ->  show
+ * PUT     /donees/:id          ->  update
+ * DELETE  /donees/:id          ->  destroy
+ */
+
 'use strict';
 
-var _     = require('lodash');
-var Donee = require('./donee.model');
-var mp    = require('multiparty');
+var _     = require('lodash'),
+    Donee = require('./donee.model'),
+    mp    = require('multiparty');
 
 // Get list of donees
 exports.index = function(req, res) {

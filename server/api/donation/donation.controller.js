@@ -1,7 +1,16 @@
+/**
+ * Using Rails-like standard naming convention for endpoints.
+ * GET     /donations              ->  index
+ * POST    /donations              ->  create
+ * GET     /donations/:id          ->  show
+ * PUT     /donations/:id          ->  update
+ * DELETE  /donations/:id          ->  destroy
+ */
+
 'use strict';
 
-var _ = require('lodash');
-var Donation = require('./donation.model');
+var _        = require('lodash'),
+    Donation = require('./donation.model');
 
 // Get list of donations
 exports.index = function(req, res) {
