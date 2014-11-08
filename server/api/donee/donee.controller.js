@@ -1,7 +1,8 @@
 'use strict';
 
-var _ = require('lodash');
+var _     = require('lodash');
 var Donee = require('./donee.model');
+var mp    = require('multiparty');
 
 // Get list of donees
 exports.index = function(req, res) {
@@ -22,10 +23,18 @@ exports.show = function(req, res) {
 
 // Creates a new donee in the DB.
 exports.create = function(req, res) {
-  console.log('REQ.BODY>>>>>', req.body);
-  Donee.create(req.body, function(err, donee) {
-    if(err) { return handleError(res, err); }
-    return res.json(201, donee);
+  var form = new mp.Form();
+  form.parse(req, function(err, data, file){
+    var info = data.donee[0];
+    var doneeInfo = JSON.parse(info);
+    console.log('REQ.BODY>>>>>', req.body);
+    Donee.create(doneeInfo, file, function(err, donee) {
+      console.log('err in Donee.create in controller>>>>', err);
+      console.log('donee in Donee.create in controller>>>>', donee);
+
+      if(err) { return handleError(res, err); }
+      return res.json(201, donee);
+    });
   });
 };
 

@@ -20,12 +20,12 @@ angular.module('nashvestnServerApp')
       console.log('donee in function addDonee>>>>>', donee);
       console.log('file in function addDonee>>>>>', file);
       // if no file submitted, file is null
-//      var file = file ? file[0] : null;
+      var file = file ? file[0] : null;
       return $upload.upload({
         url: '/api/donees',
         method: 'POST',
         withCredentials: true,
-        data: {donee:donee},
+        data: {donee: donee},
         file: file,
         // uniform file name for all photos
         fileName: 'photo.jpg'
