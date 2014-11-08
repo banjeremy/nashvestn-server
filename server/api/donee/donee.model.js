@@ -1,8 +1,8 @@
 'use strict';
 
 var mongoose = require('mongoose'),
-    Schema = mongoose.Schema,
-    User = ('../user/user.model'),
+    Schema   = mongoose.Schema,
+    User     = ('../user/user.model'),
     Donation = ('../donation/donation.model');
 
 var UpdateSchema = new Schema({

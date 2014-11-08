@@ -1,10 +1,10 @@
 'use strict';
 
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
-var crypto = require('crypto');
-var authTypes = ['github', 'twitter', 'facebook', 'google'];
-var Patron = require('../patron/patron.model');
+var mongoose  = require('mongoose'),
+    Schema    = mongoose.Schema,
+    crypto    = require('crypto'),
+    authTypes = ['github', 'twitter', 'facebook', 'google'],
+    Patron    = require('../patron/patron.model');
 
 var UserSchema = new Schema({
   name: String,
