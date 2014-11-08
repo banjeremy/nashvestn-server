@@ -1,2 +1,23 @@
-.col-md-12
-    | This is the newDonee view.
+.row
+  .col-md-1
+  .col-md-4
+    h3 Register a New Donee
+    form(role='form', novalidate, name='newDonee')
+    .form-group
+      label(for='name') Name/Alias
+      input.form-control#name(type='text', name='name', ng-model='donee.name', required, autofocus)
+    .form-group
+      label(for='identifier') Internal Identifier
+      input.form-control#identifier(type='text', name='identifier', ng-model='donee.identifier', required)
+    .form-group
+      label(for='skills') Skills
+      input.form-control#skills(type='text', name='skills', ng-model='donee.skills')
+    .form-group
+      label(for='story') Story
+      input.form-control#story(type='textarea', name='story', ng-model='donee.story')
+    .form-group
+      label(for='photo') Photo
+      input(type='file', ng-file-select='onFileSelect($file)', ng-model='donee.photo')
+    .form-group
+      button.btn(ng-show='newDonee.$valid', ng-click='add()') Add Donee
+    
