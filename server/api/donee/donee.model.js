@@ -7,7 +7,7 @@ var mongoose = require('mongoose'),
 
 var UpdateSchema = new Schema({
   text: String,
-  createdOn: {type: Date, default: Date.now}
+  timestamp: {type: Date, default: Date.now}
 });
 
 var DoneeSchema = new Schema({
@@ -19,10 +19,9 @@ var DoneeSchema = new Schema({
   createdBy: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
   active: Boolean,
   photo: String,
-  qrCode: String,
   story: String,
   skills: [String],
-  goals: [String],
+  goal: String,
   updates: [UpdateSchema],
   donations: [{type: mongoose.Schema.Types.ObjectId, ref: 'Donation'}]
 });
@@ -38,10 +37,9 @@ DoneeSchema
       'alias': this.alias,
       'createdOn': this.createdOn,
       'photo': this.photo,
-      'qrCode': this.qrCode,
       'story': this.story,
       'skills': this.skills,
-      'goals': this.goals,
+      'goal': this.goal,
       'updates': this.updates
     };
   });
