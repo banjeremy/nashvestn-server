@@ -7,9 +7,9 @@ var mongoose = require('mongoose'),
 var PatronSchema = new Schema({
   name: String,
   userId: ObjectId,
-  createdOn: Date,
-  modifiedOn: Date,
-  lastLogin: Date
+  createdOn: { type: Date, default: Date.now },
+  modifiedOn: { type: Date, default: Date.now },
+  lastLogin: { type: Date, default: Date.now }
 });
 
 module.exports = mongoose.model('Patron', PatronSchema);
