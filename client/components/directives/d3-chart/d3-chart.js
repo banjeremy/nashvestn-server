@@ -32,7 +32,7 @@
 
     }])
 
-    .directive('d3Chart', ['d3Service', function(d3Service) {
+    .directive('d3Chart', ['d3Service', '$window', function(d3Service, $window) {
       return {
         restrict: 'EA',
         scope: {
@@ -71,7 +71,7 @@
               if (!data) return;
 
               // setup variables
-              var width = d3.select(ele[0]).node().offsetWidth - margin,
+              var width = d3.select(element[0]).node().offsetWidth - margin,
                   // calculate the height
                   height = scope.data.length * (barHeight + barPadding),
                   // Use the category20() scale function for multicolor support
