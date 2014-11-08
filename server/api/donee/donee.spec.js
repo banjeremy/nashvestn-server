@@ -15,6 +15,6 @@ describe('GET /api/donees', function() {
         if (err) return done(err);
         res.body.should.be.instanceof(Array);
         done();
-      });
+    });
   });
 });
