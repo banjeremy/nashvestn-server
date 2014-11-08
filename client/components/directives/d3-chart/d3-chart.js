@@ -3,7 +3,7 @@
 
   // code tutorial found at: http://www.ng-newsletter.com/posts/d3-on-angular.html
 
-  angular.module('d3Module', [])
+  angular.module('d3', [])
     .factory('d3Service', ['$document', '$q', '$rootScope',
       function($document, $q, $rootScope) {
         var d = $q.defer();
