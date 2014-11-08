@@ -1,12 +1,15 @@
 'use strict';
 
 var mongoose = require('mongoose'),
-    Schema = mongoose.Schema;
+    Schema = mongoose.Schema,
+    ObjectId = Schema.ObjectId;
 
 var PatronSchema = new Schema({
   name: String,
-  info: String,
-  active: Boolean
+  userId: ObjectId,
+  createdOn: Date,
+  modifiedOn: Date,
+  lastLogin: Date
 });
 
 module.exports = mongoose.model('Patron', PatronSchema);
