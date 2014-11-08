@@ -2,23 +2,43 @@ div(ng-include='"components/navbar/navbar.html"')
 
 header#banner.hero-unit
   .container
-    h1 'Allo, 'Allo!
-    p.lead Kick-start your next web app with Angular Fullstack
-    img(src='assets/images/yeoman.png', alt='I\'m Yeoman')
+    .row
+      .col-lg-4
+        img#nashTN(src='assets/images/yeoman.png')
+      .col-lg-8
+        h1 Invest In People
+        p.lead As seen in Google Play
+        p.lead Get the app now!
+          a(href='https://play.google.com/store?hl=en', role='button', target='_blank')
+            img.googleP(src='assets/images/googlePlay.png', alt='Google Play')
+    .row
+      .col-lg-12
+        img#skyline(src='assets/images/NashvilleSkyline.png')
 
 .container
   .row
-    .col-lg-12
-      h1.page-header Features:
+    .col-lg-6
+      h1.page-header About:
+      p.about alpha acid mash tun crystal malt caramel malt. alcohol lauter brewpub anaerobic, dry hopping wort. finishing hops additive 
+        | black malt heat exchanger. additive terminal gravity biere de garde gravity kolsch filter carboy pub sour/acidic. 
+        | wort cask conditioned ale brewhouse becher hydrometer wort chiller pitch. priming bacterial: secondary fermentation yeast 
+        | cask conditioned ale bung.
+
+      h2 Why Should My Organization use this?
       ul.nav.nav-tabs.nav-stacked.col-md-4.col-lg-4.col-sm-6(ng-repeat='thing in awesomeThings')
         li
           a(href='#', tooltip='{{thing.info}}')
             | {{thing.name}}
+    .col-lg-6.register
+      h3 Are you an organization?
+      button.btn.btn-primary(ng-click='register()') Register
+      h3 Want to start donating?
+      a.button.btn.btn-primary(href='https://play.google.com/store?hl=en', role='button', target='_blank') Get the App
 
 footer.footer
   .container
     p
-      | Angular Fullstack v2.0.13
+      | NashvesTN v2.0.13
       = ' | '
       a(href='https://twitter.com/tyhenkel') @tyhenkel
       = ' | '
