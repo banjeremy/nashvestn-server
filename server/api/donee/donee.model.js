@@ -5,6 +5,11 @@ var mongoose = require('mongoose'),
     User = ('../user/user.model'),
     Donation = ('../donation/donation.model');
 
+var UpdateSchema = new Schema({
+  text: String,
+  createdOn: {type: Date, default: Date.now}
+});
+
 var DoneeSchema = new Schema({
   alias: String,
   name: String,
@@ -22,11 +27,6 @@ var DoneeSchema = new Schema({
   donations: [{type: mongoose.Schema.Types.ObjectId, ref: 'Donation'}]
 });
 
-var UpdateSchema = new Schema({
-  text: String,
-  createdOn: {type: Date, default: Date.now}
-});
-
 /**
  * Virtuals
  */
@@ -42,7 +42,7 @@ DoneeSchema
       'story': this.story,
       'skills': this.skills,
       'goals': this.goals,
-      'updates'
+      'updates': this.updates
     };
   });
 
