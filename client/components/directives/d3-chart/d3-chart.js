@@ -1,7 +1,9 @@
 (function(){
   'use strict';
 
-  angular.module('d3', [])
+  // code tutorial found at: http://www.ng-newsletter.com/posts/d3-on-angular.html
+
+  angular.module('d3Module', [])
     .factory('d3Service', ['$document', '$q', '$rootScope',
       function($document, $q, $rootScope) {
         var d = $q.defer();
@@ -33,7 +35,9 @@
     .directive('d3Chart', ['d3Service', function(d3Service) {
       return {
         restrict: 'EA',
-        scope: {},
+        scope: {
+          data: '=' // bi-directional data-binding
+        },
         link: function(scope, element, attrs) {
           d3Service.d3().then(function(d3) {
             var margin = parseInt(attrs.margin) || 20,
@@ -48,20 +52,17 @@
               scope.$apply();
             };
 
-            // hard-code data
-            scope.data = [
-              {name: "Greg", score: 98},
-              {name: "Ari", score: 96},
-              {name: 'Q', score: 75},
-              {name: "Loser", score: 48}
-            ];
-
             // Watch for resize event
             scope.$watch(function() {
               return angular.element($window)[0].innerWidth;
             }, function() {
               scope.render(scope.data);
             });
+
+            // Watch for data changes and re-render
+            scope.$watch('data', function(newVals){
+              return scope.render(newVals);
+            }, true);
 
             scope.render = function(data) {
               svg.selectAll('*').remove();
@@ -87,7 +88,8 @@
 
               //create the rectangles for the bar chart
               svg.selectAll('rect')
-                .data(data).enter()
+                .data(data)
+                .enter()
                   .append('rect')
                   .attr('height', barHeight)
                   .attr('width', 140)
