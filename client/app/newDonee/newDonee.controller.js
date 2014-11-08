@@ -16,7 +16,7 @@ angular.module('nashvestnServerApp')
 
     function addDonee(donee, file){
       // if no file submitted, file is null
-      var file = file ? file[0] : null;
+      file = file ? file[0] : null;
       return $upload.upload({
         url: '/api/donees',
         method: 'POST',

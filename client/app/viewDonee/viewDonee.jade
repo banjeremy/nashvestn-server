@@ -56,8 +56,6 @@
       h3 Add Updates
       form(role='form', novalidate, name='updateForm')
       .form-group
-        input.form-control#date(type='date', name='date', ng-model='donee.newUpdateDate', required)
-      .form-group
         textarea.form-control#text(type='text', name='text', cols='40', rows='3',ng-model='donee.newUpdateText', required, placeholder='text')
       .form-group
         button.btn.btn-primary(ng-show='updateForm.$valid', ng-click='addUpdate()') Submit

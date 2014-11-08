@@ -1,27 +1,39 @@
 'use strict';
 
 angular.module('nashvestnServerApp')
-  .controller('ViewdoneeCtrl', function ($scope) {
-    $scope.message = 'Hello';
+  .controller('ViewdoneeCtrl',['$scope', 'Donee', function ($scope, Donee) {
+
+    $scope.newUpdate = {};
+    $scope.updates = [];
 
     $scope.editStory = function(){
       var story = $scope.donee.story;
-      Donee.update(story).then(function(response){
+      Donee.update({story:story}).then(function(){
         $scope.storyForm = !$scope.storyForm;
       });
     };
 
     $scope.editSkills = function(){
       var skills = $scope.donee.skills;
-      Donee.update(skills).then(function(response){
+      Donee.update({skills:skills}).then(function(){
         $scope.skillsForm = !$scope.skillsForm;
       });
     };
 
     $scope.editGoals = function(){
       var goals = $scope.donee.goals;
-      Donee.update(goals).then(function(response){
+      Donee.update({goals:goals}).then(function(){
         $scope.goalsForm = !$scope.goalsForm;
       });
     };
-  });//last
+    $scope.addUpdate = function(){
+      var update = {
+        date : new Date(),
+        text : $scope.donee.newUpdate.text
+      };
+      Donee.update({update:update}).then(function(response){
+        $scope.updates.push(response.data.update);
+        $scope.newUpdate = {};
+      });
+    };
+  }]);//last
