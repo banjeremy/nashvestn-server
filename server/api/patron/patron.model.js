@@ -5,8 +5,11 @@ var mongoose = require('mongoose'),
     ObjectId = Schema.ObjectId;
 
 var PatronSchema = new Schema({
+  name: String,
   userId: ObjectId,
-  name: String
+  createdOn: Date,
+  modifiedOn: Date,
+  lastLogin: Date
 });
 
 module.exports = mongoose.model('Patron', PatronSchema);

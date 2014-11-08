@@ -9,7 +9,7 @@ var DonationSchema = new Schema({
   patronId: ObjectId,
   programId: ObjectId,
   amount: Number,
-  date: Date
+  date: { type: Date, default: Date.now }
 });
 
 module.exports = mongoose.model('Donation', DonationSchema);
