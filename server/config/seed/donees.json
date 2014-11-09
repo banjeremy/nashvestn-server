@@ -6,77 +6,80 @@
         "email": "bob@test.com",
         "createdBy": "000000000000000000000003",
         "active": true,
-        "photo": "bob.jpg",
-        "story": "Now here's a little story I got to tell About three bad brothers you know so well. It started way back in history With Ad Rock, MCA, and me, Mike D. Been had a little horsey named Paul Revere. Just me and my horsey and a quart of beer. Riding across the land, kicking up sand. Sheriff's posse's on my tail 'cause I'm in demand",
+        "photo": "https://khabaristantimes.com/wp-content/uploads/2014/11/pg-64-cska-3-getty1-150x150.jpg",
+        "story": "My wife passed away several years ago. I found myself unable to function in everyday life. I lost my job and couldn't pick myself up. After I lost my home, I lived on friends couches for a few months. I finally woke up and realized that I needed to start living my life again. I am ready to work. I have experience as a programmer, but will start anywhere.",
         "skills": [
-            "nunchuck",
-            "programming",
-            "busking"
+            "javascript",
+            "mongodb",
+            "html",
+            "css"
         ],
-        "goal": "My life goal is to be more awesome than Chuck Norris.",
+        "goal": "My life goal is to be happier today than I was yesterday.",
         "updates": [
             {
-                "text": "So stoked to participate in this program!",
+                "text": "Thanks to this program, I met a guy who was looking for someone with my skillset. I was just offered a job as a junior developer!",
                 "timestamp": "1415480578730"
             },
             {
-                "text": "Ballin'. Got my new bank account!",
+                "text": "I just opened a new bank account! Paychecks are coming in.",
                 "timestamp": "1416031200000"
             },
             {
-                "text": "Happy Christmahannukwanzadan!",
+                "text": "Just closed on my new home!",
                 "timestamp": "1448949600000"
             }
         ]
     },
     {
         "_id": "a00000000000000000000002",
-        "alias": "AnitaHug",
-        "name": "Anita Mann",
-        "email": "AnitaHug@test.com",
+        "alias": "AnitaH",
+        "name": "Anita Jones",
+        "email": "Anita@test.com",
         "createdBy": "000000000000000000000003",
         "active": true,
-        "photo": "anita.png",
-        "story": "I was crazy once, they locked me in a rubber room, it was cold in that rubber room and cold makes me crazy. Crazy? I was crazy once, they locked me in a rubber room, it was cold in that rubber room and cold makes me crazy. Crazy? I was crazy once, they locked me in a rubber room, it was cold in that rubber room and cold makes me crazy.",
+        "photo": "http://www.mammogrampromise.org/client/images/communityleaders/kravus.png",
+        "story": "I would rather not say how I got to where I am, but I am not content. I am a hard worker, with a heart of gold. I am hoping that my life will turn around.",
         "skills": [
             "painting",
-            "building",
-            "belly dancing"
+            "childcare",
+            "CPR",
+            "teaching"
         ],
-        "goal": "My life goal is to be a professional painting belly dancer.",
+        "goal": "My life goal is to own my own home and start a daycare.",
         "updates": [
             {
-                "text": "Yo! Things are going great",
+                "text": "Since joining this program, I have connected with a family that needed a live-in nanny. Now I have a home and a new family.",
                 "timestamp": "1415480578730"
             },
             {
-                "text": "I got a gig belly dancing at a greek restaurant",
+                "text": "I love what I am doing, life couldn't be better.",
                 "timestamp": "1448949600000"
             }
         ]
     },
     {
         "_id": "a00000000000000000000003",
-        "alias": "JackYack",
-        "name": "Jack Mayoff",
-        "email": "JackYack@test.com",
+        "alias": "JackM",
+        "name": "Jack Meyer",
+        "email": "Jack@test.com",
         "createdBy": "000000000000000000000003",
         "active": true,
-        "photo": "jack.png",
-        "story": "Here is my story, I was a like a monkey jumping on a bed, then I fell off and bumped my head. My mom called the dr and the dr said, no more monkeys jumping on the bed.",
+        "photo": "http://media-cache-ec0.pinimg.com/236x/02/90/93/02909348983a41489381cbe362ac9f5f.jpg",
+        "story": "I was a writer for 25 years. When I lost my job, I didn't know where to turn. The Contributor has helped to keep me motivated. I see the same folks everyday while I am standing on the corner selling the paper. Who knows, maybe one of them will be my future employer.",
         "skills": [
             "typing",
-            "sewing",
+            "creating",
+            "graphic design",
             "writing"
         ],
-        "goal": "My goal in life is to write a book about sewing.",
+        "goal": "My goal in life is to write a book about my journey.",
         "updates": [
             {
                 "text": "I'm so thankful for this program",
                 "timestamp": "1415480578730"
             },
             {
-                "text": "My life is so much better now",
+                "text": "I just started chapter one of my life story.",
                 "timestamp": "1448949600000"
             }
         ]
@@ -84,25 +87,26 @@
     {
         "_id": "a00000000000000000000004",
         "alias": "HughJ",
-        "name": "Hugh Jass",
+        "name": "Hugh Jamin",
         "email": "HughJ@test.com",
         "createdBy": "000000000000000000000003",
         "active": true,
-        "photo": "hugh.png",
-        "story": "I'm a little teapot, short and stout...here is my handle and here is my spout. When I get all warmed up and you hear me shout, tip me over and pour me out.",
+        "photo": "http://www.blogcdn.com/blog.moviefone.com/media/2010/06/michaelfassbender-slickhair.jpg",
+        "story": "I was in a car accident several years back. I was injured and unable to work. Things just started to fall apart and I found myself without a job or a home. I have been selling papers for the Contributor and I enjoy meeting and talking with new people everyday.",
         "skills": [
             "gardening",
             "communication",
-            "flying"
+            "painting",
+            "wood-working"
         ],
         "goal": "My goal in life is to be a pilot.",
         "updates": [
             {
-                "text": "I got hired to be a private pilot for a corporation",
+                "text": "One of my Contributor customers is a man who has been a pilot for 10 years. He is going to give my flying lessons!",
                 "timestamp": "1415480578730"
             },
             {
-                "text": "Thanks to this program I am happier than ever",
+                "text": "Thanks to this program I have received several donations and I am going to make some investments for my future.",
                 "timestamp": "1448949600000"
             }
         ]
@@ -114,21 +118,22 @@
         "email": "Sal@test.com",
         "createdBy": "000000000000000000000003",
         "active": true,
-        "photo": "sal.jpg",
-        "story": "I am happy, oh so happy. I am happy as happy can be.",
+        "photo": "http://www.jcoach.com/wp-content/uploads/2011/03/singleGuy-150x150.jpg",
+        "story": "I am in this position because of a series of bad decisions I made when I was younger. I am a better man today than I was then and I want to make a change. I want to get a job and a home and I am willing to do the work to make that happen. I am hoping that through this program I am able to make the connections necessary to make that happen.",
         "skills": [
-            "talking",
-            "selling",
-            "cleaning"
+            "hard worker",
+            "quick learner",
+            "good listener",
+            "great communicator"
         ],
-        "goal": "My goal in life is to be a salesman.",
+        "goal": "My goal in life is to be a successful man, to get married and have 3 children.",
         "updates": [
             {
-                "text": "I am the newest salesman at Toyota",
+                "text": "I just met up with someone through this program who has offered me a job. It's a great opportunity.",
                 "timestamp": "1415480578730"
             },
             {
-                "text": "I just got promoted to manager",
+                "text": "I just got promoted to manager.",
                 "timestamp": "1448949600000"
             }
         ]

@@ -1,10 +1,16 @@
 'use strict';
 
 angular.module('nashvestnServerApp')
-  .controller('ViewdoneeCtrl',['$scope', 'Donee', function ($scope, Donee) {
+  .controller('ViewdoneeCtrl',['$scope', 'Donee', '$routeParams', function ($scope, Donee, $routeParams) {
 
     $scope.newUpdate = {};
     $scope.updates = [];
+
+    if ($routeParams.doneeId){
+      Donee.findById($routeParams.doneeId).success(function(donee){
+        $scope.donee = donee;
+      });
+    }
 
     $scope.editStory = function(){
       var story = $scope.donee.story;

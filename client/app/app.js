@@ -5,6 +5,8 @@ angular.module('nashvestnServerApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
+  'ui.bootstrap',
+  'monospaced.qrcode',
   'ui.bootstrap'
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {

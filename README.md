@@ -5,36 +5,35 @@ NashvesTN
 - coverage status icon
 
 ### Screenshots
-![Image1](https://raw.githubusercontent.com/banjeremy/nashvestn-server/master/docs/screenshots/one.jpg)
-![Image2](https://raw.githubusercontent.com/banjeremy/nashvestn-server/master/docs/screenshots/two.jpg)
+forthcoming
 
 ### Description
 NashvesTN is a tool to connect people.  This app makes it easier for a user to connect with the transient population of Nashville, TN.  We have made it easier to donate either to an organization or a specefic person affilated with that organization.  After scanning the QR code on their badge you can then read their story, see their photo, find out about their aspirations and click the button to donate.
 
 ### Models
 ```
-User Model
+#User Model
 -
 ```
 
 ```
-Donee Model
+#Donee Model
 -
 ```
 
 ```
-Patron Model
+#Patron Model
 -
 ```
 
 ```
-Donation Model
+#Donation Model
 -
 ```
 
 ### Database
 ```
-User Collection
+#User Collection
 - name
 - email
 - role
@@ -49,7 +48,7 @@ Auth
 ```
 
 ```
-Donee Collection
+#Donee Collection
 - alias
 - name
 - email
@@ -66,7 +65,7 @@ Donee Collection
 ```
 
 ```
-Patron Collection
+#Patron Collection
 - name
 - userId
 - createdOn
@@ -75,7 +74,7 @@ Patron Collection
 ```
 
 ```
-Donation Collection
+#Donation Collection
 - doneeId
 - patronId
 - programId
@@ -90,7 +89,7 @@ Donation Collection
 - [x] Payment processing via Stripe
 - [x] Social login
 - [ ] Report generation
-- [ ] Feature 8
+- [ ] Social sharing
 - [ ] Feature 9
 - [ ] Feature 10
 
