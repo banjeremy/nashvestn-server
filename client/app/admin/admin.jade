@@ -19,7 +19,7 @@ div(ng-include='"components/navbar/navbar.html"')
       .row.doneeEdit
         .col-lg-12
           ul(ng-repeat='donee in donees | filter: nameFilter')
-            li: a(href='/#/viewDonee/:{{donee._id}}') {{donee.name}} 
+            li: a(href='/#/viewDonee/{{donee._id}}') {{donee.name}} 
 
   .row
     .col-lg-4
