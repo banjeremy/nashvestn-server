@@ -10,6 +10,7 @@
         "story": "My wife passed away several years ago. I found myself unable to function in everyday life. I lost my job and couldn't pick myself up. After I lost my home, I lived on friends couches for a few months. I finally woke up and realized that I needed to start living my life again. I am ready to work. I have experience as a programmer, but will start anywhere.",
         "skills": [
             "javascript",
+            "mongodb",
             "html",
             "css"
         ],
@@ -41,6 +42,7 @@
         "skills": [
             "painting",
             "childcare",
+            "CPR",
             "teaching"
         ],
         "goal": "My life goal is to own my own home and start a daycare.",
@@ -67,6 +69,7 @@
         "skills": [
             "typing",
             "creating",
+            "graphic design",
             "writing"
         ],
         "goal": "My goal in life is to write a book about my journey.",
@@ -93,6 +96,7 @@
         "skills": [
             "gardening",
             "communication",
+            "painting",
             "wood-working"
         ],
         "goal": "My goal in life is to be a pilot.",
@@ -119,6 +123,7 @@
         "skills": [
             "hard worker",
             "quick learner",
+            "good listener",
             "great communicator"
         ],
         "goal": "My goal in life is to be a successful man, to get married and have 3 children.",
