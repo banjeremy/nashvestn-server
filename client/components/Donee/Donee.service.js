@@ -10,7 +10,7 @@ angular.module('nashvestnServerApp')
       return $http.get('/api/donees/' + id);
     }
     function update(donee){
-      return $http.put('/api/donees/:id', donee);
+      return $http.put('/api/donees/'+donee._id, donee);
     }
 
     return {

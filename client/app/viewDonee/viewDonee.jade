@@ -28,19 +28,19 @@
     .col-sm-4
       i.fa.fa-pencil.fa-fw.fa-2x.pull-right.edit(ng-click='skillsForm = !skillsForm')
       #mySkills
-      #skills(ng-hide='skillsForm', ng-class="{active: skillsForm}")
-        h3 My Skills
-          ul
-            li(ng-repeat='skill in donee.skills'){{skill}}
-      #skillsForm(ng-show='skillsForm', ng-class="{active: skillsForm}")
-        .form-group
-          label(for='skills') Skills
-            textarea.form-control(name='skills', type='text', cols='60', rows='5', ng-model='donee.skills')
-        .button.btn.btn-primary(ng-click='editSkills()') Save
+        #skills(ng-hide='skillsForm', ng-class="{active: skillsForm}")
+          h3 My Skills
+            ul
+              li(ng-repeat='skill in donee.skills'){{skill}}
+        #skillsForm(ng-show='skillsForm', ng-class="{active: skillsForm}")
+          .form-group
+            label(for='skills') Skills
+              textarea.form-control(name='skills', type='text', cols='60', rows='5', ng-model='newSkills')
+            .button.btn.btn-primary(ng-click='editSkills()') Save
     .col-sm-1
   .row
     .col-sm-1
-    .col-sm-10
+    .col-sm-6
       i.fa.fa-pencil.fa-fw.fa-2x.pull-right.edit(ng-click='goalsForm = !goalsForm')
       #goals
         h3 My Goals
@@ -56,10 +56,10 @@
     .col-sm-6
       h3 Add Updates
       form(role='form', novalidate, name='updateForm')
-      .form-group
-        textarea.form-control#text(type='text', name='text', cols='40', rows='3',ng-model='donee.newUpdateText', required, placeholder='Please post your new update here...')
-      .form-group
-        button.btn.btn-primary(ng-show='updateForm.$valid', ng-click='addUpdate()') Submit
+        .form-group
+          textarea.form-control#text(type='text', name='text', cols='40', rows='3',ng-model='newUpdateText', required, placeholder='Please post your new update here...')
+        .form-group
+          button.btn.btn-primary(ng-show='updateForm.$valid', ng-click='addUpdate()') Submit
     .col-sm-4
       h3 My Updates
       #updates
