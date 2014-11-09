@@ -1,17 +1,13 @@
 'use strict';
 
 angular.module('nashvestnServerApp')
-  .controller('AdminCtrl', ['$scope', function($scope) {
+  .controller('AdminCtrl', ['$scope', 'Donee', function($scope, Donee) {
 
     // Use the User $resource to fetch all users
 
-    $scope.donees = [
-     { name: 'Clark' },
-     { name: 'Roger' },
-     { name: 'Sally'},
-     { name: 'Bob'},
-     { name: 'Bette'}
-    ];
+    Donee.find().success(function(donees){
+      $scope.donees = donees;
+    });
 
     // $scope.delete = function(user) {
     //   User.remove({ id: user._id });
