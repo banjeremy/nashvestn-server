@@ -6,8 +6,8 @@ angular.module('nashvestnServerApp')
     $scope.newUpdate = {};
     $scope.updates = [];
 
-    if ($routeParams.doneeId){
-      Donee.findById($routeParams.doneeId).success(function(donee){
+    if ($routeParams.id){
+      Donee.findById($routeParams.id).success(function(donee){
         $scope.donee = donee;
       });
     }

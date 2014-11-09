@@ -1,19 +1,18 @@
 .col-sm-12
-  #printThis
-    h1 Nashvestn
-    .row
-      .col-sm-1
-      .col-sm-6
-        .donee(ng-repeat='donee in donees')
-        img(ng-src='assets/images/yeoman.png')
-      .col-sm-4
-        h2 {{donee.alias}} Alias
-        .row
-          .col-sm-6
-            qrcode( version='4', size='200', error-correction-level='H', data='Twenty-four chars long..', download='true')
-          .col-sm-6
-            button#print.btn.btn-primary(ng-click='printQR()') Print QR Code
-          .col.sm-1
+  h1 Nashvestn
+  .row
+    .col-sm-1
+    .col-sm-6
+      h2 Name: {{donee.name}}
+      img(ng-src='{{donee.photo}}')
+    .col-sm-4
+      h2 Alias: {{donee.alias}}
+      .row
+        .col-sm-6
+          qrcode( version='4', size='200', error-correction-level='H', data='{{donee._id}}', download='true')
+        .col-sm-6
+          button#print.btn.btn-primary(ng-click='printQR()') Print QR Code
+    .col.sm-1
   .row
     .col-sm-1
     .col-sm-6
@@ -28,10 +27,11 @@
         .button.btn.btn-primary(ng-click='editStory()') Save
     .col-sm-4
       i.fa.fa-pencil.fa-fw.fa-2x.pull-right.edit(ng-click='skillsForm = !skillsForm')
-      #mySkills(ng-repeat='skill in donee.skills')
+      #mySkills
       #skills(ng-hide='skillsForm', ng-class="{active: skillsForm}")
         h3 My Skills
-        h4 {{skill}} skill1
+          ul
+            li(ng-repeat='skill in donee.skills'){{skill}}
       #skillsForm(ng-show='skillsForm', ng-class="{active: skillsForm}")
         .form-group
           label(for='skills') Skills
@@ -44,11 +44,11 @@
       i.fa.fa-pencil.fa-fw.fa-2x.pull-right.edit(ng-click='goalsForm = !goalsForm')
       #goals
         h3 My Goals
-        p {{donee.goals}}
+        p {{donee.goal}}
       #goalsForm(ng-show='goalsForm', ng-class="{active: goalsForm}")
         .form-group
           label(for='goals') Goals
-            textarea.form-control(name='goals', type='text', cols='90', rows='5', ng-model='donee.goals')
+            textarea.form-control(name='goals', type='text', cols='90', rows='5', ng-model='donee.goal')
         .button.btn.btn-primary(ng-click='editGoals()') Save
     .col-sm-1
   .row
@@ -57,15 +57,15 @@
       h3 Add Updates
       form(role='form', novalidate, name='updateForm')
       .form-group
-        textarea.form-control#text(type='text', name='text', cols='40', rows='3',ng-model='donee.newUpdateText', required, placeholder='text')
+        textarea.form-control#text(type='text', name='text', cols='40', rows='3',ng-model='donee.newUpdateText', required, placeholder='Please post your new update here...')
       .form-group
         button.btn.btn-primary(ng-show='updateForm.$valid', ng-click='addUpdate()') Submit
     .col-sm-4
-      #updates(ng-repeat='update in donee.updates')
       h3 My Updates
-      .row
-        .col-sm-4
-          h5 {{update.date | date: 'MMM d, yyyy'}} date
-        .col-sm-8
-          h5 {{update.text}} update
+      #updates
+      .row(ng-repeat='update in donee.updates')
+          .col-sm-4
+            h5 {{update.timestamp | date: 'MMM d, yyyy'}}
+          .col-sm-8
+            h5 {{update.text}}
     .col-sm-1
