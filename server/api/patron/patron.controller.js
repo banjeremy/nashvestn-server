@@ -10,7 +10,8 @@
 'use strict';
 
 var _      = require('lodash'),
-    Patron = require('./patron.model');
+    Patron = require('./patron.model'),
+    Donation = require('../donation/donation.model');
 
 // Get list of patrons
 exports.index = function(req, res) {
@@ -47,6 +48,21 @@ exports.update = function(req, res) {
     updated.save(function (err) {
       if (err) { return handleError(res, err); }
       return res.json(200, patron);
+    });
+  });
+};
+
+exports.me = function(req, res) {
+  var patronId = 'b00000000000000000000001';
+  Patron.findById(patronId, function (err, patron) {
+    if(err) { return handleError(res, err); }
+    if(!patron) { return res.send(404); }
+
+    Donation.find({patronId:patronId}, function(err, donations){
+      console.log('donations', donations);
+      var result = patron.profile;
+      result.donations = donations;
+      res.json(result);
     });
   });
 };
