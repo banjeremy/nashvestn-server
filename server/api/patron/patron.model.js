@@ -12,4 +12,13 @@ var PatronSchema = new Schema({
   lastLogin: { type: Date, default: Date.now }
 });
 
+PatronSchema
+  .virtual('profile')
+  .get(function() {
+    return {
+      'name': this.name,
+      'donations': this.donations
+    };
+  });
+
 module.exports = mongoose.model('Patron', PatronSchema);

@@ -2,9 +2,10 @@
 
 var express    = require('express'),
     controller = require('./patron.controller');
-    
+
 var router     = express.Router();
 
+router.get('/me', controller.me);
 router.get('/', controller.index);
 router.get('/:id', controller.show);
 router.post('/', controller.create);
