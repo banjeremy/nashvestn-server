@@ -3,142 +3,182 @@
         "doneeId": "a00000000000000000000001",
         "patronId": "b00000000000000000000001",
         "programId": null,
-        "amount": 75
+        "amount": 75,
+        "date": 1406869200000
     },
     {
         "doneeId": "a00000000000000000000001",
         "patronId": "b00000000000000000000005",
         "programId": null,
-        "amount": 200
+        "amount": 200,
+        "date": 1406869200000
     },
     {
         "doneeId": "a00000000000000000000002",
         "patronId": "b00000000000000000000002",
         "programId": null,
-        "amount": 500
+        "amount": 500,
+        "date": 1406869200000
     },
     {
         "doneeId": "a00000000000000000000002",
         "patronId": "b00000000000000000000001",
         "programId": null,
-        "amount": 50
+        "amount": 50,
+        "date": 1406869200000
     },
     {
         "doneeId": "a00000000000000000000002",
         "patronId": "b00000000000000000000004",
         "programId": null,
-        "amount": 50
+        "amount": 50,
+        "date": 1406869200000
     },
     {
         "doneeId": "a00000000000000000000003",
         "patronId": "b00000000000000000000001",
         "programId": null,
-        "amount": 25
+        "amount": 25,
+        "date": 1406869200000
     },
     {
         "doneeId": "a00000000000000000000003",
         "patronId": "b00000000000000000000005",
         "programId": null,
-        "amount": 500
+        "amount": 500,
+        "date": 1406869200000
     },
     {
         "doneeId": "a00000000000000000000003",
         "patronId": "b00000000000000000000002",
         "programId": null,
-        "amount": 100
+        "amount": 100,
+        "date": 1406869200000
     },
     {
         "doneeId": "a00000000000000000000004",
         "patronId": "b00000000000000000000002",
         "programId": null,
-        "amount": 75
+        "amount": 75,
+        "date": 1406869200000
     },
     {
         "doneeId": "a00000000000000000000004",
         "patronId": "b00000000000000000000003",
         "programId": null,
-        "amount": 25
+        "amount": 25,
+        "date": 1406869200000
     },
     {
         "doneeId": "a00000000000000000000004",
         "patronId": "b00000000000000000000005",
         "programId": null,
-        "amount": 50
+        "amount": 50,
+        "date": 1406869200000
     },
     {
         "doneeId": "a00000000000000000000004",
         "patronId": "b00000000000000000000005",
         "programId": null,
-        "amount": 25
+        "amount": 25,
+        "date": 1406869200000
     },
     {
         "doneeId": "a00000000000000000000005",
         "patronId": "b00000000000000000000002",
         "programId": null,
-        "amount": 50
+        "amount": 50,
+        "date": 1406869200000
     },
     {
         "doneeId": "a00000000000000000000005",
         "patronId": "b000000000000000000000003",
         "programId": null,
-        "amount": 5
-    },
-
-    {
-        "doneeId": "a00000000000000000000005",
-        "patronId": "b000000000000000000000003",
-        "programId": null,
-        "amount": 1000
-    },
-
-
-    {
-        "doneeId": "a00000000000000000000006",
-        "patronId": "b000000000000000000000003",
-        "programId": null,
-        "amount": 1000
+        "amount": 5,
+        "date": 1406869200000
     },
     {
         "doneeId": "a00000000000000000000006",
-        "patronId": "b000000000000000000000003",
+        "patronId": "b000000000000000000000005",
         "programId": null,
-        "amount": 1000
+        "amount": 100,
+        "date": 1388556000000
     },
     {
         "doneeId": "a00000000000000000000006",
-        "patronId": "b000000000000000000000003",
+        "patronId": "b000000000000000000000005",
         "programId": null,
-        "amount": 1000
+        "amount": 90,
+        "date": 1391234400000
     },
     {
         "doneeId": "a00000000000000000000006",
-        "patronId": "b000000000000000000000003",
+        "patronId": "b000000000000000000000005",
         "programId": null,
-        "amount": 1000
+        "amount": 75,
+        "date": 1393653600000
     },
     {
         "doneeId": "a00000000000000000000006",
-        "patronId": "b000000000000000000000003",
+        "patronId": "b000000000000000000000005",
         "programId": null,
-        "amount": 1000
+        "amount": 85,
+        "date": 1396328400000
     },
     {
         "doneeId": "a00000000000000000000006",
-        "patronId": "b000000000000000000000003",
+        "patronId": "b000000000000000000000005",
         "programId": null,
-        "amount": 1000
+        "amount": 85,
+        "date": 1398920400000
     },
     {
         "doneeId": "a00000000000000000000006",
-        "patronId": "b000000000000000000000003",
+        "patronId": "b000000000000000000000005",
         "programId": null,
-        "amount": 1000
+        "amount": 50,
+        "date": 1401598800000
     },
     {
         "doneeId": "a00000000000000000000006",
-        "patronId": "b000000000000000000000003",
+        "patronId": "b000000000000000000000005",
         "programId": null,
-        "amount": 1000
+        "amount": 25,
+        "date": 1404190800000
+    },
+    {
+        "doneeId": "a00000000000000000000006",
+        "patronId": "b000000000000000000000005",
+        "programId": null,
+        "amount": 25,
+        "date": 1406869200000
+    },
+    {
+        "doneeId": "a00000000000000000000006",
+        "patronId": "b000000000000000000000005",
+        "programId": null,
+        "amount": 35,
+        "date": 1409547600000
+    },
+    {
+        "doneeId": "a00000000000000000000006",
+        "patronId": "b000000000000000000000005",
+        "programId": null,
+        "amount": 35,
+        "date": 1412139600000
+    },
+    {
+        "doneeId": "a00000000000000000000006",
+        "patronId": "b000000000000000000000005",
+        "programId": null,
+        "amount": 35,
+        "date": 1414818000000
+    },
+    {
+        "doneeId": "a00000000000000000000006",
+        "patronId": "b00000000000000000000005",
+        "programId": null,
+        "amount": 20,
+        "date": 1417413600000
     }
-
 ]
