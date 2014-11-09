@@ -31,50 +31,104 @@
     },
     {
         "_id": "a00000000000000000000002",
-        "alias": "ENTER ALIAS",
-        "name": "FIRST LAST",
-        "email": "ALIAS@test.com",
+        "alias": "AnitaHug",
+        "name": "Anita Mann",
+        "email": "AnitaHug@test.com",
         "createdBy": "000000000000000000000003",
         "active": true,
-        "photo": "NAME.png",
+        "photo": "anita.png",
+        "story": "I was crazy once, they locked me in a rubber room, it was cold in that rubber room and cold makes me crazy. Crazy? I was crazy once, they locked me in a rubber room, it was cold in that rubber room and cold makes me crazy. Crazy? I was crazy once, they locked me in a rubber room, it was cold in that rubber room and cold makes me crazy.",
         "skills": [
-            "SKILL1",
-            "SKILL2",
-            "SKILL3"
+            "painting",
+            "building",
+            "belly dancing"
         ],
-        "goal": "ASPIRATIONS SENTENCE.",
+        "goal": "My life goal is to be a professional painting belly dancer.",
         "updates": [
             {
-                "text": "TEXT1",
+                "text": "Yo! Things are going great",
                 "timestamp": "1415480578730"
             },
             {
-                "text": "TEXT2",
+                "text": "I got a gig belly dancing at a greek restaurant",
                 "timestamp": "1448949600000"
             }
         ]
     },
     {
         "_id": "a00000000000000000000003",
-        "alias": "ENTER ALIAS",
-        "name": "FIRST LAST",
-        "email": "ALIAS@test.com",
+        "alias": "JackYack",
+        "name": "Jack Mayoff",
+        "email": "JackYack@test.com",
         "createdBy": "000000000000000000000003",
         "active": true,
-        "photo": "NAME.jpg",
+        "photo": "jack.png",
+        "story": "Here is my story, I was a like a monkey jumping on a bed, then I fell off and bumped my head. My mom called the dr and the dr said, no more monkeys jumping on the bed.",
         "skills": [
-            "SKILL1",
-            "SKILL2",
-            "SKILL3"
+            "typing",
+            "sewing",
+            "writing"
         ],
-        "goal": "ASPIRATIONS SENTENCE.",
+        "goal": "My goal in life is to write a book about sewing.",
         "updates": [
             {
-                "text": "TEXT1",
+                "text": "I'm so thankful for this program",
                 "timestamp": "1415480578730"
             },
             {
-                "text": "TEXT2",
+                "text": "My life is so much better now",
+                "timestamp": "1448949600000"
+            }
+        ]
+    },
+    {
+        "_id": "a00000000000000000000004",
+        "alias": "HughJ",
+        "name": "Hugh Jass",
+        "email": "HughJ@test.com",
+        "createdBy": "000000000000000000000003",
+        "active": true,
+        "photo": "hugh.png",
+        "story": "I'm a little teapot, short and stout...here is my handle and here is my spout. When I get all warmed up and you hear me shout, tip me over and pour me out.",
+        "skills": [
+            "gardening",
+            "communication",
+            "flying"
+        ],
+        "goal": "My goal in life is to be a pilot.",
+        "updates": [
+            {
+                "text": "I got hired to be a private pilot for a corporation",
+                "timestamp": "1415480578730"
+            },
+            {
+                "text": "Thanks to this program I am happier than ever",
+                "timestamp": "1448949600000"
+            }
+        ]
+    },
+    {
+        "_id": "a00000000000000000000005",
+        "alias": "Sal",
+        "name": "Sal Lami",
+        "email": "Sal@test.com",
+        "createdBy": "000000000000000000000003",
+        "active": true,
+        "photo": "sal.jpg",
+        "story": "I am happy, oh so happy. I am happy as happy can be.",
+        "skills": [
+            "talking",
+            "selling",
+            "cleaning"
+        ],
+        "goal": "My goal in life is to be a salesman.",
+        "updates": [
+            {
+                "text": "I am the newest salesman at Toyota",
+                "timestamp": "1415480578730"
+            },
+            {
+                "text": "I just got promoted to manager",
                 "timestamp": "1448949600000"
             }
         ]
