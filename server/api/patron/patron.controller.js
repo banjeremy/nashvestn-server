@@ -1,7 +1,16 @@
+/**
+ * Using Rails-like standard naming convention for endpoints.
+ * GET     /patrons              ->  index
+ * POST    /patrons              ->  create
+ * GET     /patrons/:id          ->  show
+ * PUT     /patrons/:id          ->  update
+ * DELETE  /patrons/:id          ->  destroy
+ */
+
 'use strict';
 
-var _ = require('lodash');
-var Patron = require('./patron.model');
+var _      = require('lodash'),
+    Patron = require('./patron.model');
 
 // Get list of patrons
 exports.index = function(req, res) {
