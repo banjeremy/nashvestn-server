@@ -3,8 +3,8 @@
   .row
     .col-sm-1
     .col-sm-6
-      .donee(ng-repeat='donee in donees')
-      img(ng-src='assets/images/yeoman.png')
+      h2 Name: {{donee.name}}
+      img(ng-src='donee.photo')
     .col-sm-4
       h2 Alias: {{donee.alias}}
       .row
@@ -57,15 +57,15 @@
       h3 Add Updates
       form(role='form', novalidate, name='updateForm')
       .form-group
-        textarea.form-control#text(type='text', name='text', cols='40', rows='3',ng-model='donee.newUpdateText', required, placeholder='text')
+        textarea.form-control#text(type='text', name='text', cols='40', rows='3',ng-model='donee.newUpdateText', required, placeholder='Please post your new update here...')
       .form-group
         button.btn.btn-primary(ng-show='updateForm.$valid', ng-click='addUpdate()') Submit
     .col-sm-4
-      #updates(ng-repeat='update in donee.updates')
       h3 My Updates
-      .row
-        .col-sm-4
-          h5 {{update.date | date: 'MMM d, yyyy'}} date
-        .col-sm-8
-          h5 {{update.text}} update
+      #updates
+      .row(ng-repeat='update in donee.updates')
+          .col-sm-4
+            h5 {{update.timestamp | date: 'MMM d, yyyy'}}
+          .col-sm-8
+            h5 {{update.text}}
     .col-sm-1

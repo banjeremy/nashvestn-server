@@ -3,7 +3,7 @@
 angular.module('nashvestnServerApp')
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/viewDonee/:id?', {
+      .when('/viewDonee/:id', {
         templateUrl: 'app/viewDonee/viewDonee.html',
         controller: 'ViewdoneeCtrl'
       });
