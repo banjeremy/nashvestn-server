@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('nashvestnServerApp')
-  .controller('AdminCtrl', ['$scope', 'Donee', function($scope, Donee) {
+  .controller('AdminCtrl', ['$scope', 'Donee', '$http', function($scope, Donee, $http) {
 
     // Use the User $resource to fetch all users
 
@@ -9,12 +9,8 @@ angular.module('nashvestnServerApp')
       $scope.donees = donees;
     });
 
-    // $scope.delete = function(user) {
-    //   User.remove({ id: user._id });
-    //   angular.forEach($scope.users, function(u, i) {
-    //     if (u === user) {
-    //       $scope.users.splice(i, 1);
-    //     }
-    //   });
-    // };
+    $http.get('/api/users/me', function(user){
+      console.log(user);
+      $scope.admin = user;
+    });
   }]);
