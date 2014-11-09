@@ -11,4 +11,7 @@ router.put('/:id', controller.update);
 router.patch('/:id', controller.update);
 router.delete('/:id', controller.destroy);
 
+// MLF NOTE: not sure if this is the correct route method...
+router.post('/:id/image', controller.uploadPhoto);
+
 module.exports = router;
