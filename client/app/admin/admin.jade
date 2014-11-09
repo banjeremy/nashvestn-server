@@ -3,9 +3,9 @@ div(ng-include='"components/navbar/navbar.html"')
   .row
     .col-lg-6
       img.img-responsive(src='assets/images/nasResMis.png')
-      h2 { { admin.name }}
-      h4  { { admin.address}}
-      h4 { { admin.account }}
+      h2 {{admin.name}}
+      //h4  {{admin.address}}
+      h4 Admin Dashboard
       button.btn.btn-primary.btn-block.admin(ng-click='toggleAdd()') Print A Report
     .col-lg-6
       a.button.btn.btn-primary.btn-block.admin(href='/newDonee') Add A Donee 
