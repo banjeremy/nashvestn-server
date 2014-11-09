@@ -137,5 +137,39 @@
                 "timestamp": "1448949600000"
             }
         ]
+    },
+    {
+        "_id": "a00000000000000000000006",
+        "alias": "Frankie",
+        "name": "Frankie H. Badger",
+        "email": "Frankie@test.com",
+        "createdBy": "000000000000000000000003",
+        "active": true,
+        "photo": "https://dl.dropboxusercontent.com/u/1699691/dude.jpeg",
+        "story": "I was deployed 3 times during the recent conflicts in the Middle East. War is not pretty or something to brag about; I witnessed some really bad stuff.  When I returned home, I had a hard time adjusting & found myself without a job. Then I lost my home.  I want to get my life back on track, & I think this program oping that through this program will help me make that happen.",
+        "skills": [
+            "hard worker",
+            "quick learner",
+            "Javascript",
+            "Angularjs",
+            "Node.js",
+            "MongoDB & Mongoose",
+            "Mobile & web games"
+        ],
+        "goal": "My goal in life is to be an awesome developer, & contribute to the Nashville community, which has been so supportive.",
+        "updates": [
+            {
+                "text": "I just met up with a mentor through this program. It's nice to have someone in my corner.",
+                "timestamp": "1415480578730"
+            },
+            {
+                "text": "I was accepted into the Nashville Software School as an apprentice. Things are starting to fall in place!",
+                "timestamp": "144894960004"
+            },
+            {
+                "text": "One week after NSS graduation & I already have a job offer from Eventbrite.",
+                "timestamp": "1448949600000"
+            }
+        ]
     }
 ]
