@@ -79,7 +79,7 @@
                   // our xScale
                   xScale = d3.scale.linear()
                     .domain([0, d3.max(data, function(d) {
-                      return d.score;
+                      return d.donations;
                     })])
                     .range([0, width]);
 
@@ -97,11 +97,11 @@
                   .attr('y', function(d,i) {
                     return i * (barHeight + barPadding);
                   })
-                  .attr('fill', function(d) { return color(d.score); })
+                  .attr('fill', function(d) { return color(d.donations); })
                   .transition()
                     .duration(1000)
                     .attr('width', function(d) {
-                      return xScale(d.score);
+                      return xScale(d.donations);
                     });
             }
 
