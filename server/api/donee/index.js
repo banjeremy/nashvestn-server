@@ -1,8 +1,9 @@
 'use strict';
 
 var express    = require('express'),
-    controller = require('./donee.controller'),
-    router     = express.Router();
+    controller = require('./donee.controller');
+
+var router     = express.Router();
 
 router.get('/', controller.index);
 router.get('/:id', controller.show);
@@ -10,8 +11,5 @@ router.post('/', controller.create);
 router.put('/:id', controller.update);
 router.patch('/:id', controller.update);
 router.delete('/:id', controller.destroy);
-
-// MLF NOTE: not sure if this is the correct route method...
-router.post('/:id/image', controller.uploadPhoto);
 
 module.exports = router;

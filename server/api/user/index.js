@@ -3,8 +3,9 @@
 var express    = require('express'),
     controller = require('./user.controller'),
     config     = require('../../config/environment'),
-    auth       = require('../../auth/auth.service'),
-    router     = express.Router();
+    auth       = require('../../auth/auth.service');
+
+var router     = express.Router();
 
 router.get('/', auth.hasRole('admin'), controller.index);
 router.delete('/:id', auth.hasRole('admin'), controller.destroy);
