@@ -6,12 +6,11 @@ div.navbar.navbar-default.navbar-static-top(ng-controller='NavbarCtrl')
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand(href='/') nashvestn-server
+      a.navbar-brand(href='/')
+        img#logo(src='assets/images/nashvesTNLogo.png')
 
     div#navbar-main.navbar-collapse.collapse(collapse='isCollapsed')
       ul.nav.navbar-nav
-        li(ng-repeat='item in menu', ng-class='{active: isActive(item.link)}')
-          a(ng-href='{{item.link}}') {{item.title}}
 
         li(ng-show='isAdmin()', ng-class='{active: isActive("/admin")}')
           a(href='/admin') Admin
@@ -25,6 +24,9 @@ div.navbar.navbar-default.navbar-static-top(ng-controller='NavbarCtrl')
 
         li(ng-show='isLoggedIn()')
           p.navbar-text Hello {{ getCurrentUser().name }}
+          
+        li(ng-show='isLoggedIn()', ng-class='{active: isActive("/admin")}')
+          a(href='/admin').fa.fa-tachometer 
 
         li(ng-show='isLoggedIn()', ng-class='{active: isActive("/settings")}')
           a(href='/settings')
