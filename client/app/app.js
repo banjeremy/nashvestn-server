@@ -6,7 +6,6 @@ angular.module('nashvestnServerApp', [
   'ngSanitize',
   'ngRoute',
   'ui.bootstrap',
-  'angularFileUpload',
   'monospaced.qrcode',
   'ui.bootstrap'
 ])
