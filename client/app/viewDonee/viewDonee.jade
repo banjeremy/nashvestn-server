@@ -9,7 +9,7 @@
       h2 {{donee.alias}} Alias
       .row
         .col-sm-6
-          #qrcode
+          qrcode( version='4', size='200', error-correction-level='H', data='Twenty-four chars long..', download='true')
         .col-sm-6
           button#print.btn.btn-primary(ng-click='printQR()') Print QR Code
     .col.sm-1
