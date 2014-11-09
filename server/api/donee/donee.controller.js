@@ -10,8 +10,7 @@
 'use strict';
 
 var _     = require('lodash'),
-    Donee = require('./donee.model'),
-    mp    = require('multiparty');
+    Donee = require('./donee.model');
 
 // Get list of donees
 exports.index = function(req, res) {
@@ -30,18 +29,11 @@ exports.show = function(req, res) {
   });
 };
 
-
 // Creates a new donee in the DB.
 exports.create = function(req, res) {
-  var form = new mp.Form();
-  // parses form information from req
-  form.parse(req, function(err, data, file){
-    var info = data.donee[0];
-    var doneeInfo = JSON.parse(info);
-    Donee.create(doneeInfo, function(err, donee) {
-      if(err) { return handleError(res, err); }
-      return res.json(201, donee);
-    });
+  Donee.create(req.body, function(err, donee) {
+    if(err) { return handleError(res, err); }
+    return res.json(201, donee);
   });
 };
 
@@ -69,11 +61,6 @@ exports.destroy = function(req, res) {
       return res.send(204);
     });
   });
-};
-
-// Uploads a profile image to server.
-exports.uploadPhoto = function(req, res) {
-
 };
 
 function handleError(res, err) {
