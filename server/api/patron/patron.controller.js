@@ -66,7 +66,7 @@ exports.me = function(req, res) {
       async.map(donations, function(donation, callback){
         Donee.findOne({_id: donation.doneeId}, function(err, donee){
           callback(null, {
-            donee: donee.name,
+            name: donee.name,
             date: donation.date,
             amount: donation.amount
           });
