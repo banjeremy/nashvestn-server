@@ -28,7 +28,7 @@ angular.module('nashvestnServerApp')
     }
   }]);
 
-/* add / update Photo */
+/* add || update Photo */
 $scope.onFileSelect = function(image) {
   //image: an array of files selected (aka $files), but we are only allowing one; each file has name, size, and type.
   if (angular.isArray(image)) {
@@ -48,7 +48,6 @@ $scope.onFileSelect = function(image) {
   $scope.uploadProgress = 0;
 
   $scope.uploadPhoto = $upload.uploadPhoto({
-      // MLF NOTE: not sure if this is the right URL ??
       url: 'api/donees/:id/image', // node.js route
       method: 'POST',
       withCredentials: true,
@@ -70,3 +69,4 @@ $scope.onFileSelect = function(image) {
       console.log('Error uploading file: ' + err.message || err);
   });
 };
+// END UPLOAD PHOTO
