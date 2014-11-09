@@ -65,6 +65,7 @@
             }, true);
 
             scope.render = function(data) {
+              console.log('data in scope.render>>>>>', data);
               svg.selectAll('*').remove();
 
               // If we don't pass any data, return out of the element
@@ -87,6 +88,7 @@
               svg.attr('height', height);
 
               //create the rectangles for the bar chart
+              console.log('DATA>>>>', data);
               svg.selectAll('rect')
                 .data(data)
                 .enter()
@@ -101,6 +103,9 @@
                   .transition()
                     .duration(1000)
                     .attr('width', function(d) {
+                      console.log('d.donations in width function>>>>>', d.donations);
+                      console.log('xScale(d.donations) in width function>>>>>', xScale(d.donations));
+
                       return xScale(d.donations);
                     });
             }

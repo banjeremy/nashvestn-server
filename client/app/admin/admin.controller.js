@@ -18,7 +18,7 @@ angular.module('nashvestnServerApp')
      { name: "Roger", donations: 98},
      { name: "Sally", donations: 76},
      { name: "Bob", donations: 40},
-//     { name: "Bette", dontations: 98}
+     { name: "Bette", donations: 98}
     ];
 
 

@@ -20,18 +20,18 @@ div(ng-include='"components/navbar/navbar.html"')
         .col-lg-12
           ul(ng-repeat='donee in donees | filter: nameFilter')
             li: a(href='/#/viewDonee/:{{donee._id}}') {{donee.name}} 
-
-  .row
-    .col-lg-4
-      img.img-responsive.graph(src='assets/images/graph.svg')
-    .col-lg-4
-      img.img-responsive.graph(src='assets/images/graph.svg')
-    .col-lg-4
-      img.img-responsive.graph(src='assets/images/graph.svg')
   .row
     .col-md-12
       .chart
         div(d3-chart, data='data')
+  .row
+    .col-lg-4
+      img.img-responsive.graph(src='assets/images/graph.svg')
+    .col-lg-4
+      img.img-responsive.graph(src='assets/images/graph.svg')
+    .col-lg-4
+      img.img-responsive.graph(src='assets/images/graph.svg')
+
 
   p
     | The delete user and user index api routes are restricted to users with the 'admin' role.
