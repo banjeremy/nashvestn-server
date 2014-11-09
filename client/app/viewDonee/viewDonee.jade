@@ -6,10 +6,10 @@
       .donee(ng-repeat='donee in donees')
       img(ng-src='assets/images/yeoman.png')
     .col-sm-4
-      h2 {{donee.alias}} Alias
+      h2 Alias: {{donee.alias}}
       .row
         .col-sm-6
-          qrcode( version='4', size='200', error-correction-level='H', data='Twenty-four chars long..', download='true')
+          qrcode( version='4', size='200', error-correction-level='H', data='{{donee._id}}', download='true')
         .col-sm-6
           button#print.btn.btn-primary(ng-click='printQR()') Print QR Code
     .col.sm-1
@@ -27,12 +27,11 @@
         .button.btn.btn-primary(ng-click='editStory()') Save
     .col-sm-4
       i.fa.fa-pencil.fa-fw.fa-2x.pull-right.edit(ng-click='skillsForm = !skillsForm')
+      #mySkills
       #skills(ng-hide='skillsForm', ng-class="{active: skillsForm}")
-        #mySkills
-          h3 My Skills
+        h3 My Skills
           ul
-            li(ng-repeat='skill in donee.skills')
-              {{skill}}
+            li(ng-repeat='skill in donee.skills'){{skill}}
       #skillsForm(ng-show='skillsForm', ng-class="{active: skillsForm}")
         .form-group
           label(for='skills') Skills
