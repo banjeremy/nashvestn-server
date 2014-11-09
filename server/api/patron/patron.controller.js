@@ -11,7 +11,9 @@
 
 var _      = require('lodash'),
     Patron = require('./patron.model'),
-    Donation = require('../donation/donation.model');
+    Donation = require('../donation/donation.model'),
+    Donee = require('../donee/donee.model'),
+    async = require('async');
 
 // Get list of patrons
 exports.index = function(req, res) {
@@ -53,16 +55,26 @@ exports.update = function(req, res) {
 };
 
 exports.me = function(req, res) {
-  var patronId = 'b00000000000000000000001';
+  var patronId = 'b00000000000000000000005';
   Patron.findById(patronId, function (err, patron) {
     if(err) { return handleError(res, err); }
     if(!patron) { return res.send(404); }
 
     Donation.find({patronId:patronId}, function(err, donations){
-      console.log('donations', donations);
       var result = patron.profile;
-      result.donations = donations;
-      res.json(result);
+
+      async.map(donations, function(donation, callback){
+        Donee.findOne({_id: donation.doneeId}, function(err, donee){
+          callback(null, {
+            donee: donee.name,
+            date: donation.date,
+            amount: donation.amount
+          });
+        });
+      }, function(err, newDonations){
+        result.donations = newDonations;
+        res.json(result);
+      });
     });
   });
 };
