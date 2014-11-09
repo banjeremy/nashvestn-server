@@ -27,10 +27,12 @@
         .button.btn.btn-primary(ng-click='editStory()') Save
     .col-sm-4
       i.fa.fa-pencil.fa-fw.fa-2x.pull-right.edit(ng-click='skillsForm = !skillsForm')
-      #mySkills(ng-repeat='skill in donee.skills')
       #skills(ng-hide='skillsForm', ng-class="{active: skillsForm}")
-        h3 My Skills
-        h4 {{skill}} skill1
+        #mySkills
+          h3 My Skills
+          ul
+            li(ng-repeat='skill in donee.skills')
+              {{skill}}
       #skillsForm(ng-show='skillsForm', ng-class="{active: skillsForm}")
         .form-group
           label(for='skills') Skills
@@ -43,11 +45,11 @@
       i.fa.fa-pencil.fa-fw.fa-2x.pull-right.edit(ng-click='goalsForm = !goalsForm')
       #goals
         h3 My Goals
-        p {{donee.goals}}
+        p {{donee.goal}}
       #goalsForm(ng-show='goalsForm', ng-class="{active: goalsForm}")
         .form-group
           label(for='goals') Goals
-            textarea.form-control(name='goals', type='text', cols='90', rows='5', ng-model='donee.goals')
+            textarea.form-control(name='goals', type='text', cols='90', rows='5', ng-model='donee.goal')
         .button.btn.btn-primary(ng-click='editGoals()') Save
     .col-sm-1
   .row
