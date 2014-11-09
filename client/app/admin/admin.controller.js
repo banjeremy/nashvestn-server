@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('nashvestnServerApp')
-  .controller('AdminCtrl', function ($scope, $http, Auth, User) {
+  .controller('AdminCtrl', ['$scope', function($scope) {
 
     // Use the User $resource to fetch all users
 
@@ -21,4 +21,4 @@ angular.module('nashvestnServerApp')
     //     }
     //   });
     // };
-  });
+  }]);
