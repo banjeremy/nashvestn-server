@@ -11,10 +11,28 @@
   "email": "test2@test2.com",
   "password": "test2"
 }, {
-  "_id": "000000000000000000000002",
+  "_id": "000000000000000000000003",
   "provider": "local",
   "role": "admin",
   "name": "Admin",
   "email": "admin@admin.com",
   "password": "admin"
+}, {
+  "_id": "000000000000000000000004",
+  "provider": "local",
+  "name": "Dakota",
+  "email": "test3@test3.com",
+  "password": "test3"
+}, {
+  "_id": "000000000000000000000005",
+  "provider": "local",
+  "name": "Brian",
+  "email": "test4@test4.com",
+  "password": "test4"
+}, {
+  "_id": "000000000000000000000006",
+  "provider": "local",
+  "name": "Gary",
+  "email": "test5@test5.com",
+  "password": "test5"
 }]
