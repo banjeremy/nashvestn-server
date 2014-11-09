@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('nashvestnServerApp',[])
+angular.module('nashvestnServerApp')
   .directive('ngPrinter', [function(){
 
     function printDirective(){
