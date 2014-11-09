@@ -1,4 +1,4 @@
-## NashVesTN
+## NashvesTN
 =====================
 ### Code Badges
 - build status icon
@@ -13,28 +13,28 @@ forthcoming
 
 ### Models
 ```
-**User Model**
+User Model
 -
 ```
 
 ```
-**Donee Model**
+Donee Model
 -
 ```
 
 ```
-**Patron Model**
+Patron Model
 -
 ```
 
 ```
-**Donation Model**
+Donation Model
 -
 ```
 
 ### Database
 ```
-**User Collection**
+User Collection
 - name
 - email
 - role
@@ -49,7 +49,7 @@ Auth
 ```
 
 ```
-**Donee Collection**
+Donee Collection
 - alias
 - name
 - email
@@ -66,7 +66,7 @@ Auth
 ```
 
 ```
-**Patron Collection**
+Patron Collection
 - name
 - userId
 - createdOn
@@ -75,7 +75,7 @@ Auth
 ```
 
 ```
-**Donation Collection**
+Donation Collection
 - doneeId
 - patronId
 - programId
@@ -87,7 +87,7 @@ Auth
 - [x] Web Admin Dashboard (for administrators)
 - [x] Mobile Companion App: Ionic & Cordova (for patrons)
 - [x] QR code reader
-- [x] Payment processing
+- [x] Payment processing via Stripe
 - [x] Social login
 - [ ] Report generation
 - [ ] Feature 8
