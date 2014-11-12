@@ -9,7 +9,8 @@ var PatronSchema = new Schema({
   userId: ObjectId,
   createdOn: { type: Date, default: Date.now },
   modifiedOn: { type: Date, default: Date.now },
-  lastLogin: { type: Date, default: Date.now }
+  lastLogin: { type: Date, default: Date.now },
+  donations: [{type: mongoose.Schema.Types.ObjectId, ref: 'Donation'}]
 });
 
 PatronSchema
