@@ -1,6 +1,45 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200);
+///////********* MAIN PART OF PAGE /LOGO *****
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+#logo {
+  max-height: 300%;
+  margin-left: -29%;
+  margin-top: -9%;
+  margin-right: -40px;
+}
 
+#nashTN {
+  max-width: 100%;
+  margin-left: 4%;
+  margin-bottom: -46%;
+}
 
+.google2 {
+  font-size: 165%;
+}
+.hero-unit {
+    position: relative;
+    padding: 30px 15px;
+    color: #F5F5F5;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    background: #4393B9;
+}
+
+img.googleP {
+  display: inline-block;
+  max-width: 20%;
+  margin-left: 2%;
+}
+
+#skyline {
+  max-width: 120%;
+  margin-bottom: -2%;
+  margin-left: -10%;
+
+}
 .thing-form {
   margin: 20px 0;
 }
@@ -13,43 +52,70 @@
 #banner h1 {
     font-size: 60px;
     line-height: 1;
-    letter-spacing: -1px;
+    letter-spacing: 1px;
+}
+.callToAction{
+  margin-top: -140px;
+
+  h3 {
+    font-weight: lighter;
+    font-size: 30px;
+  }
+}
+.info {
+  margin: 10px;
+  padding: 20px;
+}
+/*=============== ABOUT SECTION  ========================*/
+.about {
+  margin-top: 40px;
+  text-align: left;
+  h1 {
+    font-weight: bolder;
+  }
+  .lead {
+    font-weight: bolder;
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+  p {
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: 1px;
+  }
+}
+.infoGraphic {
+  margin-top: 40px;
 }
 
 /*=============== WHY SECTION  ========================*/
 .why{
-  text-align: center;
+  text-align: left;
+  h2 {
+    font-weight: bolder;
+    font-size: 40px;
+  }
+  .lead {
+    font-weight: bolder;
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+  p {
+    font-size: 18px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+  }
 }
-
-.whySection{
-  margin-top: 10%;
+/*=============== WHY SECTION  ========================*/
+.how {
+  background-color: rgba(28, 118, 161, 0.53);
+  padding: 20px;
+  ul{
+    li {
+      margin-left: -30px;
+    }
+  }
 }
-
-.hero-unit {
-    position: relative;
-    padding: 30px 15px;
-    color: #F5F5F5;
-    text-align: center;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-    background: #4393B9;
-}
-
-img.googleP{
-  display: inline-block;
-  max-width: 20%;
-  margin-left: 2%;
-}
-
-#skyline{
-  max-width: 120%;
-  margin-bottom: -2%;
-  margin-left: -10%;
-
-}
-.callToAction{
-  margin-top: -95px;
-}
-
 //////*********** FOOTER *********/////////
 .footer {
     text-align: center;
@@ -57,28 +123,6 @@ img.googleP{
     margin-top: 70px;
     border-top: 1px solid #E5E5E5;
 }
-
-
-///////********* MAIN PART OF PAGE /LOGO *****
-#logo{
-  max-height: 300%;
-  margin-left: -29%;
-  margin-top: -9%;
-  margin-right: -40px;
-
-}
-
-#nashTN{
-  max-width: 100%;
-  margin-left: 4%;
-  margin-bottom: -46%;
-}
-
-.google2{
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 165%;
-}
-
 
 /*===  OUR TEAM SECTION  ===*/
 .our-team{
@@ -148,6 +192,7 @@ img.googleP{
 .team-member .social-icons{
   margin-bottom: 25px;
   text-align: center;
+  margin-left: -40px;
 }
 .team-member .social-icons ul li{
   display: inline-block;
@@ -163,11 +208,22 @@ img.googleP{
   text-align: center;
 }
 .team-member .social-icons ul li a:hover{
-  color: #e96656;
+  color: #CEDD6F;
 }
 
 @media (max-width: 1200px) {
   img#nashTN {
     display: none;
+  }
+}
+
+.custcol {
+  width: 100%/5;
+  display: inline-block;
+}
+@media (max-width: 768px) {
+  .custcol {
+    width: 100%;
+    display: inline;
   }
 }
