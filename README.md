@@ -15,7 +15,9 @@ NashvesTN is a tool to connect people.  This app makes it easier for a user to c
 npm install -g yo
 npm install -g generator-angular-fullstack
 
-yo angular-fullstack:heroku
+yo angular-fullstack:heroku #setup heroku/initial deployment
+
+grunt buildcontrol:heroku #successive deployments
 ```
 
 ### Models
