@@ -10,6 +10,16 @@ forthcoming
 ### Description
 NashvesTN is a tool to connect people.  This app makes it easier for a user to connect with the transient population of Nashville, TN.  We have made it easier to donate either to an organization or a specefic person affilated with that organization.  After scanning the QR code on their badge you can then read their story, see their photo, find out about their aspirations and click the button to donate.
 
+### To Deploy
+```bash
+npm install -g yo
+npm install -g generator-angular-fullstack
+
+yo angular-fullstack:heroku #setup heroku/initial deployment
+
+grunt buildcontrol:heroku #successive deployments
+```
+
 ### Models
 ```
 #User Model
